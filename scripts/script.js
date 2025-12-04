@@ -26,9 +26,9 @@ botao.addEventListener('click', () => {
 const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // comportamento padrão
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
+    if (target) { // se houver um href no link a então...
       const headerHeight = document.querySelector('header').offsetHeight;
       const targetPosition = target.offsetTop - headerHeight - 20;
       window.scrollTo({

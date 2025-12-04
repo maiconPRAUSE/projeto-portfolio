@@ -31,12 +31,18 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  /* fixação do menu */
+  position: sticky; 
+  top: 0;
+  /* funciona como uma camada, 0 representa o padrão, a parte principal da pagina, mudar de camada vai fazer o menu sobrepor todos que estão abaixo, seria subir 1 andar. Nesse caso é para a barra do menu sobrepor o vídeo, já que o vídeo fica por cima da barra de menu */
+  z-index: 1;
 }
 
 nav#menu ul {
   list-style: none;
   display: flex;
   gap: 10px;
+  
 }
 
 nav#menu a {
